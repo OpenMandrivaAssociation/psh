@@ -5,9 +5,9 @@
 
 Name:       %{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 3
 
-Summary:    Containing translations for default locale
+Summary:    Developing for Perl Shell
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
