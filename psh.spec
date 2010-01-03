@@ -1,9 +1,11 @@
 %define upstream_name    psh
 %define upstream_version 1.8.1
 
+%define _requires_exceptions perl(Win32)
+
 Name:       %{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Containing translations for default locale
 License:    GPL+ or Artistic
