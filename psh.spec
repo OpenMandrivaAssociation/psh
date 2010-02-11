@@ -1,23 +1,19 @@
-%define upstream_name    psh
-%define upstream_version 1.8.1
+%define	name			psh
+%define	version			1.8.1
+%define	_requires_exceptions	perl(Win32)
 
-%define _requires_exceptions perl(Win32)
-
-Name:       %{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
-
-Summary:    Developing for Perl Shell
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module//%{upstream_name}-%{upstream_version}.tar.gz
-
-BuildRequires: perl(Cwd)
-BuildRequires: perl(File::Spec)
-
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+Name:		%{name}
+Version:	%perl_convert_version %{version}
+Release:	%mkrel 4
+Summary:	Developping for Perl Shell
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{name}
+Source0:	http://www.cpan.org/modules/by-module//%{name}-%{version}.tar.gz
+BuildRequires:	perl(Cwd)
+BuildRequires:	perl(File::Spec)
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 *psh* is a Perl program which executes a read-eval loop with enough options
@@ -41,7 +37,7 @@ which controls whether the perl value of the evaluation is saved and
 printed after each command.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
