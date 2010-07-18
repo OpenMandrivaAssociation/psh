@@ -4,7 +4,7 @@
 
 Name:		%{name}
 Version:	%perl_convert_version %{version}
-Release:	%mkrel 4
+Release:	%mkrel 5
 Summary:	Developping for Perl Shell
 License:	GPL+ or Artistic
 Group:		Development/Perl
@@ -58,9 +58,9 @@ rm -rf %buildroot
 %doc README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-/usr/bin/psh
-/usr/share/man/man1/psh.1.lzma
-/usr/share/man/man1/pshcomplete.1.lzma
-/usr/share/man/man1/pshconfig.1.lzma
-/usr/share/man/man1/pshdevel.1.lzma
+%{_bindir}/psh
+%{_mandir}/man1/psh.1.lzma
+%{_mandir}/man1/pshcomplete.1.lzma
+%{_mandir}/man1/pshconfig.1.lzma
+%{_mandir}/man1/pshdevel.1.lzma
 
