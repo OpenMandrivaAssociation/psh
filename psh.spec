@@ -59,8 +59,4 @@ rm -rf %buildroot
 %{_mandir}/man3/*
 %perl_vendorlib/*
 %{_bindir}/psh
-%{_mandir}/man1/psh.1.lzma
-%{_mandir}/man1/pshcomplete.1.lzma
-%{_mandir}/man1/pshconfig.1.lzma
-%{_mandir}/man1/pshdevel.1.lzma
-
+%{_mandir}/man1/*
