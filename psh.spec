@@ -4,7 +4,7 @@
 
 Name:		%{name}
 Version:	%perl_convert_version %{version}
-Release:	%mkrel 5
+Release:	%mkrel 6
 Summary:	Developping for Perl Shell
 License:	GPL+ or Artistic
 Group:		Development/Perl
