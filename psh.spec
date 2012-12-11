@@ -1,10 +1,14 @@
-%define	name			psh
 %define	version			1.8.1
-%define	_requires_exceptions	perl(Win32)
 
-Name:		%{name}
+%if %{_use_internal_dependency_generator}
+%define __noautoreq 'perl\\(Win32(.*)\\)'
+%else
+%define	_requires_exceptions	perl(Win32)
+%endif
+
+Name:		psh
 Version:	%perl_convert_version %{version}
-Release:	%mkrel 6
+Release:	8
 Summary:	Developping for Perl Shell
 License:	GPL+ or Artistic
 Group:		Development/Perl
@@ -12,8 +16,8 @@ Url:		http://search.cpan.org/dist/%{name}
 Source0:	http://www.cpan.org/modules/by-module//%{name}-%{version}.tar.gz
 BuildRequires:	perl(Cwd)
 BuildRequires:	perl(File::Spec)
+BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 *psh* is a Perl program which executes a read-eval loop with enough options
@@ -40,18 +44,14 @@ printed after each command.
 %setup -q -n %{name}-%{version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
-
-%clean
-rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
@@ -60,3 +60,4 @@ rm -rf %buildroot
 %perl_vendorlib/*
 %{_bindir}/psh
 %{_mandir}/man1/*
+
