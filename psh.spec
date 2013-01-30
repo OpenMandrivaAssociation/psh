@@ -13,7 +13,7 @@ Summary:	Developping for Perl Shell
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{name}
-Source0:	http://www.cpan.org/modules/by-module//%{name}-%{version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/G/GR/GREGOR/%{name}-%{version}.tar.gz
 BuildRequires:	perl(Cwd)
 BuildRequires:	perl(File::Spec)
 BuildRequires:	perl-devel
