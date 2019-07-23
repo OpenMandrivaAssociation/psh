@@ -8,7 +8,7 @@
 
 Name:		psh
 Version:	%perl_convert_version %{version}
-Release:	9
+Release:	1
 Summary:	Developping for Perl Shell
 License:	GPL+ or Artistic
 Group:		Development/Perl
