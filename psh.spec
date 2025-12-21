@@ -14,6 +14,7 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{name}
 Source0:	http://search.cpan.org/CPAN/authors/id/G/GR/GREGOR/%{name}-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires:	perl(Cwd)
 BuildRequires:	perl(File::Spec)
 BuildRequires:	perl-devel
