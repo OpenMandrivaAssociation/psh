@@ -7,13 +7,13 @@
 %endif
 
 Name:		psh
-Version:	%perl_convert_version %{version}
-Release:	1
+Version:	1.8.1
+Release:	2
 Summary:	Developping for Perl Shell
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{name}
-Source0:	http://search.cpan.org/CPAN/authors/id/G/GR/GREGOR/%{name}-%{version}.tar.gz
+Url:		https://metacpan.org/dist/psh
+Source0:	https://cpan.metacpan.org/authors/id/G/GR/GREGOR/psh-%{version}.tar.gz
 BuildRequires:	make
 BuildRequires:	perl(Cwd)
 BuildRequires:	perl(File::Spec)
